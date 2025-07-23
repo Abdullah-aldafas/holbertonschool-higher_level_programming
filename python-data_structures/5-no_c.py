@@ -4,11 +4,4 @@ def no_c(my_string):
     for i in my_string:
         if i != "c" and i != "C":
             new = new + i
-    return new
-
-
-
-
-print(no_c("Best School"))
-print(no_c("Chicago"))
-print(no_c("C is fun!"))
+    return new  # return "".join([i for i in my_string if i != "c" and i != "C"])
