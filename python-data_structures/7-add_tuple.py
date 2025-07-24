@@ -19,4 +19,4 @@ def add_tuple(tuple_a=(), tuple_b=()):
 
     r = a + i
     z = b + c
-    return (r , z)
+    return (r, z)
