@@ -1,18 +1,12 @@
 >>> text_indentation = __import__('5-text_indentation').text_indentation
 >>> text_indentation("Hello. How are you? I'm fine: thanks.")
 Hello.
-
 How are you?
-
 I'm fine:
-
 thanks.
-
 >>> text_indentation("This is a test. Another test?")
 This is a test.
-
 Another test?
-
 >>> text_indentation("This is no punctuation")
 This is no punctuation
 >>> text_indentation("")
@@ -22,5 +16,4 @@ Traceback (most recent call last):
 TypeError: text must be a string
 >>> text_indentation("  Hello  :  world   ")
 Hello:
-
 world
