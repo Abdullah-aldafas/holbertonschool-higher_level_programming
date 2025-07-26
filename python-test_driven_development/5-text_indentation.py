@@ -5,20 +5,20 @@ after each '.', '?', or ':'.
 """
 
 
+
 def text_indentation(text):
     """
     Prints text with 2 new lines after each '.', '?', or ':'.
     """
     if type(text) is not str:
         raise TypeError("text must be a string")
-
-    buffer = ""
-    for char in text:
-        buffer += char
-        if char in ".?:":
-            print(buffer.strip())
+    text = text.strip()
+    i = 0
+    while i < len(text):
+        print(text[i], end="")
+        if text[i] in ".?:":
             print()
-            buffer = ""
-
-        if buffer.strip():
-            print(buffer.strip())
+            print()
+            while i + 1 < len(text) and text[i + 1] in " \t":
+                i += 1
+        i += 1
