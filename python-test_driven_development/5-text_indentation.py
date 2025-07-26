@@ -11,13 +11,17 @@ def text_indentation(text):
     """
     if type(text) is not str:
         raise TypeError("text must be a string")
+        
+    i = 0
+    while i < len(text):
+        print(text[i], end="")
+        if text[i] in ".?:":
+            print("\n")
+            # skip spaces after punctuation
+            i += 1
+            while i < len(text) and text[i] == " ":
+                i += 1
+            continue
+        i += 1
 
-    current_line = ""
-    for char in text:
-        current_line += char
-        if char in ".?:":
-            print(current_line.strip())
-            print()
-            current_line = ""
-    if current_line.strip():
-        print(current_line.strip())
+text_indentation("Holberton. School? How are you: John")
