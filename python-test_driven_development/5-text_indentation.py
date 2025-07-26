@@ -5,7 +5,6 @@ after each '.', '?', or ':'.
 """
 
 
-
 def text_indentation(text):
     """
     Prints text with 2 new lines after each '.', '?', or ':'.
