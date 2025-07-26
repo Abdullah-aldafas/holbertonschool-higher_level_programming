@@ -7,10 +7,12 @@ How are you?
 I'm fine:
 
 thanks.
+
 >>> text_indentation("This is a test. Another test?")
 This is a test.
 
 Another test?
+
 >>> text_indentation("This is no punctuation")
 This is no punctuation
 >>> text_indentation("")
