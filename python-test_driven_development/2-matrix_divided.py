@@ -6,7 +6,8 @@ This module defines a function that divides all elements of a matrix.
 
 def matrix_divided(matrix, div):
     """
-    Divides all elements of a matrix by a given number, rounded to 2 decimal places.
+    Divides all elements of a matrix by a given number, 
+    rounded to 2 decimal places.
     """
     if type(div) is not int and type(div) is not float:
         raise TypeError("div must be a number")
