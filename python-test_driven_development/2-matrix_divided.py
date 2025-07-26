@@ -10,13 +10,15 @@ def matrix_divided(matrix, div):
     """
     if type(div) is not int and type(div) is not float:
         raise TypeError("div must be a number")
-    if div == 0 or div == float('nan'):
+    if div == 0 or div != div:  # div != div covers float('nan')
         raise ZeroDivisionError("division by zero")
 
     if (not isinstance(matrix, list) or
-            not all(isinstance(row, list) for row in matrix) or
-            not all(isinstance(num, (int, float)) for row in matrix for num in row)):
-        raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+        not all(isinstance(row, list) for row in matrix) or
+        not all(isinstance(num, (int, float))
+                for row in matrix for num in row)):
+        raise TypeError(
+            "matrix must be a matrix (list of lists) of integers/floats")
 
     row_length = len(matrix[0])
     if not all(len(row) == row_length for row in matrix):
