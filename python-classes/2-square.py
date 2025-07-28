@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-"""This module defines an empty Square class."""
+"""This module defines a Square class."""
 
 
 class Square:
-    """Represents an empty square."""
+    """Represents a square."""
     def __init__(self, size = 0):
         if type(size) is not int:
             raise TypeError("size must be an integer")
