@@ -1,13 +1,13 @@
 #!/usr/bin/python3
 """
-this module is an emptiy class
+This module defines a Square class with size validation.
 """
 
 
 class Square:
     """a square class"""
     def __init__(self, size=0):
-        """ initilize function"""
+        """Initialize the square with an optional size."""
         self.size = size
 
     @property
@@ -17,7 +17,7 @@ class Square:
 
     @size.setter
     def size(self, value):
-        """a setter function for size"""
+        """Set the size of the square."""
         if type(value) is not int:
             raise TypeError("size must be an integer")
         elif value < 0:
@@ -25,5 +25,5 @@ class Square:
         self.__size = value
 
     def area(self):
-        """a function that returns the area of square"""
+        """Returns the current area of the square."""
         return self.__size * self.__size
