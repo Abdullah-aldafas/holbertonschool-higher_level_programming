@@ -5,7 +5,7 @@ This module defines a Square class with size validation.
 
 
 class Square:
-    """Represents a square with a private size attribute."""
+    """Represents a square. The size attribute is private and validated."""
     def __init__(self, size=0):
         """Initialize the square with an optional size."""
         if type(size) is not int:
@@ -13,7 +13,6 @@ class Square:
         elif size < 0:
             raise ValueError("size must be >= 0")
         self.__size = size
-        
     def area(self):
         """Returns the current area of the square."""
-        return self.__size ** 2
+        return self.__size * self.__size
