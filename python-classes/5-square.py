@@ -12,10 +12,11 @@ class Square:
         self.size = size
     @property
     def size(self):
+        """a getter function for size."""
         return self.__size
     @size.setter
     def size(self, value):
-        """Initialize the square with an optional size."""
+        """Set the size of the square."""
         if type(value) is not int:
             raise TypeError("size must be an integer")
         elif value < 0:
@@ -25,7 +26,7 @@ class Square:
         """Returns the current area of the square."""
         return self.__size * self.__size
     def my_print(self):
-        """Prints the square with the character #"""
+        """Prints the square with the character # to stdout."""
         if self.__size == 0:
             print()
         else:
