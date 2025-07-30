@@ -5,9 +5,9 @@ This module defines a Square class with size validation.
 
 
 class Square:
-    """a Square class"""
+    """a Square class with size and position."""
     def __init__(self, size=0 , position=(0, 0)):
-        """Initialize the square with an optional size and position"""
+        """Initialize square with size and position."""
         self.size = size
         self.position = position
 
