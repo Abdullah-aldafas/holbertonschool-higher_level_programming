@@ -5,18 +5,17 @@ This module defines a Square class with size validation.
 
 
 class Square:
-    """a Square class with size and position."""
-
+    """a Square class"""
 
     def __init__(self, size=0, position=(0, 0)):
-        """Initialize square with size and position."""
+        """Initialize square"""
         self.size = size
         self.position = position
 
 
     @property
     def size(self):
-        """Get the size of the square."""
+        """a getter function for size."""
         return self.__size
 
 
@@ -54,7 +53,7 @@ class Square:
 
 
     def my_print(self):
-        """Prints the square with the character # to stdout."""
+        """Prints the square with the character # to Size"""
         if self.__size == 0:
             print()
             return
