@@ -6,15 +6,19 @@ This module defines a Square class with size validation.
 
 class Square:
     """a Square class with size and position."""
-    def __init__(self, size=0 , position=(0, 0)):
+
+
+    def __init__(self, size=0, position=(0, 0)):
         """Initialize square with size and position."""
         self.size = size
         self.position = position
 
+
     @property
     def size(self):
-        """a getter function for size."""
+        """Get the size of the square."""
         return self.__size
+
 
     @size.setter
     def size(self, value):
@@ -24,12 +28,14 @@ class Square:
         elif value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
-    
+
+
     @property
     def position(self):
         """a getter function for position."""
         return self.__position
-    
+
+
     @position.setter
     def position(self, value):
         """Set the position of the square."""
@@ -38,13 +44,14 @@ class Square:
         type(value[0]) is not int or
         type(value[1]) is not int or
         value[0] < 0 or value[1] < 0):
-            raise TypeError ("position must be a tuple of 2 positive integers")
+            raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
 
 
     def area(self):
         """Returns the current area of the square."""
         return self.__size * self.__size
+
 
     def my_print(self):
         """Prints the square with the character # to stdout."""
