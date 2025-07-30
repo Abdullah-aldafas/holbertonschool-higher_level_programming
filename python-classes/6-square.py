@@ -8,7 +8,7 @@ class Square:
     """a Square class"""
 
     def __init__(self, size=0, position=(0, 0)):
-        """Initialize square"""
+        """Initialize the square with an optional size."""
         self.size = size
         self.position = position
 
@@ -53,7 +53,7 @@ class Square:
 
 
     def my_print(self):
-        """Prints the square with the character # to Size"""
+        """Prints the square with the character # to stdout"""
         if self.__size == 0:
             print()
             return
