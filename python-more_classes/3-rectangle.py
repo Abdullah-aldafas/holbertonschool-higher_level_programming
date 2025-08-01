@@ -60,7 +60,3 @@ class Rectangle:
         for i in range(self.__height):
             lines.append("#" * self.__width)
         return "\n".join(lines)
-
-    def __repr__(self):
-        """print the rectangle size"""
-        return "Rectangle({}, {})".format(self.__width, self.__height)
