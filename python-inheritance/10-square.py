@@ -9,7 +9,7 @@ class Square(Rectangle):
     """Represents a square, inherits from Rectangle."""
 
     def __init__(self, size):
-        """Initializes a square with size validation and sets both width and height."""
+        """Initializes size validation and sets both width and height"""
         self.integer_validator("size", size)
         super().__init__(size, size)
         self.__size = size
