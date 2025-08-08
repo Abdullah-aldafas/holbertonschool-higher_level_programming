@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Module that defines the MyList class."""
 
 
 class MyList(list):
