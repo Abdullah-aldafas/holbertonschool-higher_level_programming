@@ -18,6 +18,7 @@ class BaseGeometry:
 
 
 class Rectangle(BaseGeometry):
+
     """Represents a rectangle, inherits from BaseGeometry."""
 
     def __init__(self, width, height):
