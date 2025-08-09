@@ -3,15 +3,17 @@
 
 class CountedIterator:
     def __init__(self, iterator, counter=0):
-        self.__iterator = iter(iterator)
-        self.__counter = counter
+        self.iterator = iter(iterator)
+        self.counter = counter
 
     def __next__(self):
-        self.__counter += 1
-        return next(self.iterator)
+        vlaue = next(self.iterator)
+        self.counter += 1
+        return vlaue
+        
 
     def get_count(self):
-        return self.__counter
+        return self.counter
 
     def __iter__(self):
         return self
