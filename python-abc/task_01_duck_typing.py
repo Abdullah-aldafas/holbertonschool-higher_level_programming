@@ -6,6 +6,7 @@ This module defines an abstract Shape class and two subclasses: Circle and Recta
 from abc import ABC, abstractmethod
 import math as m
 
+
 class Shape(ABC):
     """Abstract base class for shapes."""
 
@@ -27,7 +28,7 @@ class Circle(Shape):
         self.radius = radius
 
     def area(self):
-        return m.pi * (self.radius ** 2)
+        return m.pi * (self.radius**2)
 
     def perimeter(self):
         return 2 * m.pi * self.radius
@@ -51,7 +52,6 @@ def shape_info(shape):
     """Prints area and perimeter of any shape passed in."""
     print("Area:", shape.area())
     print("Perimeter:", shape.perimeter())
-
 
 
 c = Circle(5)
