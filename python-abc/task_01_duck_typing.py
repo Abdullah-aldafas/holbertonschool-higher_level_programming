@@ -52,13 +52,3 @@ def shape_info(shape):
     """Prints area and perimeter of any shape passed in."""
     print("Area:", shape.area())
     print("Perimeter:", shape.perimeter())
-
-
-c = Circle(5)
-r = Rectangle(3, 7)
-
-print("[Circle Info]")
-shape_info(c)
-
-print("\n[Rectangle Info]")
-shape_info(r)
