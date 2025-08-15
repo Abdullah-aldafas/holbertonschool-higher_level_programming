@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-Module for reading and printing the content of a text file.
+Module that provides a helper to write text into a file.
 """
 
 
@@ -11,4 +11,4 @@ def write_file(filename="", text=""):
     """
 
     with open(filename, "w", encoding="UTF8") as f:
-        print(f.write(text), end="")
+        return f.write(text)
