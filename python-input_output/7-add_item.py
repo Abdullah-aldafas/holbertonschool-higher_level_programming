@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
 """
-Module that provides a function to create a
-Python object from a JSON file.
+Script that adds all command-line arguments to a list,
+and saves it to add_item.json in JSON format.
 
 """
 from save_to_json_file import save_to_json_file
