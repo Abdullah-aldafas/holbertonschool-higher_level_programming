@@ -1,5 +1,14 @@
 #!/usr/bin/python3
 
+"""
+Module for reading and printing the content of a text file.
+"""
+
+
 def read_file(filename=""):
-    with open(filename,'r',encoding='UTF8') as f:
+    """
+    Read a text file (UTF8) and print its content to stdout.
+    """
+
+    with open(filename, "r", encoding="UTF8") as f:
         f.reads()
