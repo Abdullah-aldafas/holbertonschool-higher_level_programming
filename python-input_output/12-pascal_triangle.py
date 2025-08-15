@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
 
-
 def pascal_triangle(n):
+    """Return a list of lists representing Pascal's triangle of n."""
     triangle = []
     if n <= 0:
         return triangle
@@ -14,7 +14,4 @@ def pascal_triangle(n):
             prev_row = triangle[-1]
             middle = [prev_row[j] + prev_row[j + 1] for j in range(len(prev_row) - 1)]
             triangle.append([1] + middle + [1])
-    return triangle 
-
-
-    
+    return triangle
