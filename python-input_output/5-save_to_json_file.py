@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 
 """
-Module that provides a function to save a Python object to a file in JSON format.
+Module that provides a function to save a Python 
+object to a file in JSON format.
 """
 import json as j
 
