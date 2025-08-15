@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 
-"""
-Script that adds all command-line arguments to a list,
-and saves it to add_item.json in JSON format.
 
-"""
-from save_to_json_file import save_to_json_file
-from load_from_json_file import load_from_json_file
+"""Add all command-line arguments to a list and save it to add_item.json."""
+
+
+
+save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
+load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 import sys
 import os
 
