@@ -4,6 +4,7 @@
 Module that provides a helper function to append text to a file.
 """
 
+
 def append_write(filename="", text=""):
     """
     Append a string at the end of a text file (UTF-8)
