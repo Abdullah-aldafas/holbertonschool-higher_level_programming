@@ -22,9 +22,11 @@ class Student:
             }
         else:
             return self.__dict__.copy()
+
     def reload_from_json(self, json):
         """
-        Replace all attributes of the Student instance with values from a dictionary.
+        Replace all attributes of the Student instance
+         with values from a dictionary.
         """
         for key, value in json.items():
             setattr(self, key, value)
