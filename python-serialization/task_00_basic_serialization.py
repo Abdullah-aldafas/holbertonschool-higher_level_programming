@@ -20,7 +20,7 @@ def load_and_deserialize(filename):
     Python dictionary.
     """
     with open(filename, "r", encoding="utf-8") as f:
-        json.load(f)
+        opj = json.load(f)
 
     if not isinstance(obj, dict):
         raise TypeError("JSON content is not a dictionary")
