@@ -7,11 +7,9 @@ def serialize_and_save_to_file(data, filename):
     """
     Serialize a Python dictionary and save it as a JSON file.
     """
-    if not isinstance(data, dict):
-        raise TypeError("data must be a dictionary")
 
     with open(filename, "w", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
+        json.dump(data, f)
 
 
 def load_and_deserialize(filename):
@@ -20,9 +18,4 @@ def load_and_deserialize(filename):
     Python dictionary.
     """
     with open(filename, "r", encoding="utf-8") as f:
-        opj = json.load(f)
-
-    if not isinstance(obj, dict):
-        raise TypeError("JSON content is not a dictionary")
-
-    return obj
+        return json.load(f)
