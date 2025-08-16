@@ -16,7 +16,7 @@ class CustomObject:
     object with a name, age, and student status.
     """
 
-    def __init__(self, name, age, is_student):
+    def __init__(self, name: str, age: int, is_student: bool):
         """
         Initialize a CustomObject instance.
         """
@@ -37,8 +37,12 @@ class CustomObject:
         Serialize the current object instance and save
         it to a file using pickle.
         """
-        with open(filename, "wb") as f:
-            pickle.dump(self, f)
+        try:
+            with open(filename, "wb") as f:
+                pickle.dump(self, f)
+            return True
+        except Exception:
+            return None
 
     @classmethod
     def deserialize(cls, filename):
@@ -46,5 +50,11 @@ class CustomObject:
         Deserialize an object from a
         file and return the CustomObject instance.
         """
-        with open(filename, "rb") as f:
-            return pickle.load(f)
+        try:
+            with open(filename, "rb") as f:
+                obj = pickle.load(f)
+            if isinstance(obj, cls):
+                return obj
+            return None
+        except Exception:
+            return None
