@@ -25,30 +25,21 @@ def get_user(username):
     else:
         return jsonify({"error": "User not found"}), 404
 
-@app.route("/add_user", methods=["POST"])
-def add_user():
-    data = request.get_json()
 
-    if not data or "username" not in data:
+@app.route('/add_user', methods=['POST'])
+def add_user():
+    user_data = request.get_json()
+
+    if not user_data or 'username' not in user_data:
         return jsonify({"error": "Username is required"}), 400
 
-    username = data["username"]
-    
-    if username in users:
-        return jsonify({"error": "User already exists"}), 400
+    username = user_data['username']
+    users[username] = user_data
 
-    user_obj = {
-        "username": username,
-        "name": data.get("name"),
-        "age": data.get("age"),
-        "city": data.get("city"),
-    }
-
-    users[username] = user_obj
-
-
-    return jsonify({"message": "User added", "user": user_obj}), 201
-
+    return jsonify({
+        "message": "User added",
+        "user": user_data
+    }), 201
 
 
 if __name__ == "__main__":
