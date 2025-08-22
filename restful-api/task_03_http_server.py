@@ -30,7 +30,7 @@ class web(http.server.BaseHTTPRequestHandler):
             self.wfile.write(json_dat.encode())
 
         
-        elif self.path == "/state":
+        elif self.path == "/status":
             self.send_response(200)
             self.send_header("content-type", "text/plain")
             self.end_headers()
