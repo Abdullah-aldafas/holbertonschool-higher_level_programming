@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""script that lists all states with a name starting
-with N (upper N) from the database hbtn_0e_0_usa"""
+"""Displays all values in the states table where name matches the argument."""
 
 import MySQLdb
 import sys
@@ -11,12 +10,11 @@ if __name__ == "__main__":
         port=3306,
         user=sys.argv[1],
         passwd=sys.argv[2],
-        db=sys.argv[3],
+        db=sys.argv[3]
     )
 
     cur = conn.cursor()
-    cur.execute("""SELECT * FROM states WHERE name 
-                LIKE BINARY 'N%' ORDER BY id ASC""")
+    cur.execute("SELECT * FROM states WHERE name LIKE BINARY %s ORDER BY id ASC",(sys.argv[4],))
 
     for row in cur.fetchall():
         print(row)
