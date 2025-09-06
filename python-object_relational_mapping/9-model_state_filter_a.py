@@ -5,7 +5,7 @@ Lists all State objects that contain the letter 'a' from the database.
 
 import sys
 from sqlalchemy import create_engine
-from sqlalchemy.orm import session
+from sqlalchemy.orm import Session
 from model_state import Base, State
 
 if __name__ == "__main__":
