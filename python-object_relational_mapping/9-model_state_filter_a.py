@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-Lists all State objects that contain the letter 'a' from the database.
+Lists all State objects that contain
+ the letter 'a' from the database.
 """
 
 import sys
